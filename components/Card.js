@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyleCard = styled.div`
@@ -21,16 +22,23 @@ const StyleContent = styled.div`
   text-align: center;
 `;
 
-const Card = ({ name, email, id }) => {
+const Card = ({ name, email, id, linkProps, children }) => {
   return (
     <StyleCard>
-      <StyleImg
-        src={`https://robohash.org/${id}?size=200x200`}
-        alt="Robot Image"
-      />
+      {linkProps ? (
+        <Link {...linkProps}>
+          <a>
+            <StyleImg src={`https://robohash.org/${id}`} alt="Robot Image" />
+          </a>
+        </Link>
+      ) : (
+        <StyleImg src={`https://robohash.org/${id}`} alt="Robot Image" />
+      )}
+
       <StyleContent>
         <strong>{name}</strong>
         <p>{email}</p>
+        {children}
       </StyleContent>
     </StyleCard>
   );

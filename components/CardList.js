@@ -41,7 +41,15 @@ const CardList = ({ robots }) => {
       {robots.map(robot => {
         return (
           <StyleLi key={robot.id}>
-            <Card id={robot.id} name={robot.name} email={robot.email} />
+            <Card
+              id={robot.id}
+              name={robot.name}
+              email={robot.email}
+              linkProps={{
+                href: `/robot?id=${robot.id}`,
+                as: `/robot/${robot.id}`
+              }}
+            />
           </StyleLi>
         );
       })}
