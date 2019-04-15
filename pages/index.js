@@ -1,21 +1,13 @@
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
-import Card from '../components/Card';
+import CardList from '../components/CardList';
+import Template from '../layouts/template';
 
 const Index = ({ robots }) => {
   return (
-    <div>
-      {robots.map(robot => {
-        return (
-          <Card
-            name={robot.name}
-            email={robot.email}
-            id={robot.id}
-            key={robot.id}
-          />
-        );
-      })}
-    </div>
+    <Template title="RoboFriends">
+      <CardList robots={robots} />
+    </Template>
   );
 };
 
@@ -27,4 +19,5 @@ Index.getInitialProps = async () => {
     robots: data
   };
 };
+
 export default Index;
