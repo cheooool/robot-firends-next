@@ -18,10 +18,15 @@ const SearchField = styled.input`
   box-sizing: border-box;
 `;
 
-const SearchBox = () => {
+const SearchBox = ({ changeSearchValue }) => {
   return (
     <StyleBox>
-      <SearchField type="text" placeholder="Search Robot" />
+      <SearchField
+        type="text"
+        placeholder="Search Robot"
+        name="searchValue"
+        onChange={changeSearchValue}
+      />
     </StyleBox>
   );
 };
