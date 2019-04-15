@@ -2,10 +2,12 @@ import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import CardList from '../components/CardList';
 import Template from '../layouts/template';
+import SearchBox from '../components/SearchBox';
 
 const Index = ({ robots }) => {
   return (
     <Template title="RoboFriends">
+      <SearchBox />
       <CardList robots={robots} />
     </Template>
   );
