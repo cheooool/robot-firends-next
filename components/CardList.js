@@ -6,10 +6,33 @@ const StyleUl = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &:after {
+    clear: both;
+    display: table;
+    content: '';
+  }
 `;
 
 const StyleLi = styled.li`
-  margin: 1em;
+  padding: 1em;
+  box-sizing: border-box;
+  @media (min-width: 640px) {
+    float: left;
+    width: 50%;
+  }
+  @media (min-width: 960px) {
+    float: left;
+    width: 33%;
+  }
+  @media (min-width: 1280px) {
+    float: left;
+    width: 25%;
+  }
+  @media (min-width: 1600px) {
+    float: left;
+    width: 20%;
+  }
 `;
 
 const CardList = ({ robots }) => {

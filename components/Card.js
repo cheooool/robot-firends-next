@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 const StyleCard = styled.div`
   width: 100%;
-  max-width: 320px;
-  margin: 1em;
   padding: 1em;
   box-sizing: border-box;
   background: transparent;
@@ -13,7 +11,10 @@ const StyleCard = styled.div`
 `;
 
 const StyleImg = styled.img`
+  display: block;
   width: 100%;
+  max-width: 100%;
+  margin: 0 auto 1em;
 `;
 
 const StyleContent = styled.div`
