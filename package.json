@@ -1,9 +1,10 @@
 {
-  "name": "create-next-example-app",
+  "name": "robofriends",
   "scripts": {
     "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "now-build": "npm run build"
   },
   "dependencies": {
     "express": "^4.16.4",
