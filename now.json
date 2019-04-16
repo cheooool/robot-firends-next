@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "robofriends",
+  "builds": [
+    { "src": "server.js", "use": "@now/node" },
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [{ "src": "/robot/(?<id>[^/]+)$", "dest": "/robot?id=$id" }]
+}
